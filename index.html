@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David - FOLIO</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/flaticon/regular/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="./assets/flaticon/solid/css/uicons-solid-straight.css">
     
     <link rel="stylesheet" href="style.css">
 
@@ -17,24 +17,46 @@
     <section class="section-top">
     
         <!-- SECTION HEADER TOP -->
-        <header class="">
+        <header id="nav-desktop" class="">
             <div class="header-top">
                 <div class="content-left">
                     <span>David KOCHONI</span>
                 </div>
                 <div class="nav content-right">
                     <ul>
-                        <li> <a href="#about"> About </a> </li>
-                        <li> <a href="#experience"> Experience </a> </li>
-                        <li> <a href="#projects"> Projects </a> </li>
+                        <li> <a href="./index.html#about"> About </a> </li>
+                        <li> <a href="./index.html#experience"> Experience </a> </li>
+                        <li> <a href="./index.html#projects"> Projects </a> </li>
                         <li> <a href="./event_marqued.html" target="_blank"> Events marqued </a> </li>
-                        <li> <a href="#contact"> Contact </a> </li>
+                        <li> <a href="./index.html#contact"> Contact </a> </li>
                     </ul>
                 </div>
             </div>
         </header>
 
-        <header class="hamburger-header-top"></header>
+        <header id="hamburger-nav" class="hamburger-header-top">
+            <div class="header-top">
+                <div class="logo content-left">
+                    <span>David KOCHONI</span>
+                </div>
+                <div class="nav hamburger-menu content-right">
+                    <div class="hamburger-icon" onclick="toggleMenu()" id="showMenu">
+                        <img src="./assets/icons/menu.svg" alt="see_menu"> </a>
+                    </div>
+                    <ul class="menu-links" id="closeMenu">
+                        <div class="hamburger-icon close" onclick="toggleMenu()" >
+                            <img src="./assets/icons/menu_close.svg" alt="close_menu"> </a>
+                        </div>
+                        <li> <a onclick="toggleMenu()" href="./index.html#about"> About </a> </li>
+                        <li> <a onclick="toggleMenu()" href="./index.html#experience"> Experience </a> </li>
+                        <li> <a onclick="toggleMenu()" href="./index.html#projects"> Projects </a> </li>
+                        <li> <a onclick="toggleMenu()" href="./event_marqued.html" target="_blank"> Events marqued </a> </li>
+                        <li> <a onclick="toggleMenu()" href="./index.html#contact"> Contact </a> </li>
+                    </ul>
+                </div>
+                <!-- https://chatgpt.com/?model=gpt-4o -->
+            </div>
+        </header>
 
         <!-- QUELQUES DETAILS SUR LA PERSONNE DE DAVID KOCHONI -->
         <section class="section-personae" id="sectionPersonae">
@@ -51,7 +73,7 @@
                     <span class="three">Electronic .... </span>
                     <span class="four">
                         <span> <a href="./assets/cv/CV_David_KOCHONI.pdf" target="_blank"> Donwload CV </a> </span>
-                        <span> <a href="#"> Contact Info </a> </span>
+                        <span> <a href="./index.html#contact"> Contact Info </a> </span>
                     </span>
                     <span class="five">
                         <span> <a href="#"> <img src="./assets/icons/github.svg" alt="lien github"> </a> </span>
@@ -64,7 +86,7 @@
         </section>
         
     </section>
-   
+
     <!-- A PROPOS DE LA PERSONNE DE DAVID KOCHONI -->
     <section class="section-about" id="about">
 
@@ -234,11 +256,15 @@
     <footer class="section-footer" id="footer">
             
         <div class="footer list-items">
-            <li> <a href="#about">ABOUT</a> </li>
-            <li> <a href="#experience">EXPERIENCE</a> </li>
-            <li> <a href="#projects">PROJECTS</a> </li>
+            <li> <a href="./index.html#about">ABOUT</a> </li>
+            <li> <a href="./index.html#experience">EXPERIENCE</a> </li>
+            <li> <a href="./index.html#projects">PROJECTS</a> </li>
             <li> <a href="./event_marqued.html">EVENT MARQUED</a> </li>
-            <li> <a href="#contacts">CONTACT</a> </li>
+            <li> <a href="./index.html#contacts">Contact</a> </li>
+        </div>
+        
+        <div class="text-footer">
+            <span style="color: var(--dark-color);">Copyright &copy; 2024 Smith.BAB Tous droits réservés.</span>
         </div>
 
     </footer>

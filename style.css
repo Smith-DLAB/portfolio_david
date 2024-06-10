@@ -15,7 +15,8 @@
 }
 
 :root {
-    --primary-color: #E1A23F;
+    /* --primary-color: #E1A23F; */
+    --primary-color: #f48d6b;
     --primary-color-opac: #d6cf7452;
     --dark-color: #000000;
     --white-color: #ffffff;
@@ -38,8 +39,8 @@ body {
     margin: 0em 2em;
     font-family: "Poppins", 'Helvetica Neue', sans-serif;
     color : var(--dark-color);
-    /* background: var(--dark-color); */
     transition: all .3s;
+    /* background: linear-gradient(#fff8f8, #000000); */
 }
 
 section.section-top,
@@ -55,13 +56,10 @@ section {
 }
 
 /* ============= STYLE FOR HEADER ============= */ 
-header {
-    /* position: fixed; */
-    height: 17vh;
-}
 
 .header-top {
-    height: 17vh;
+    height: 20vh;
+    margin-bottom: 5em;
     display: flex;
     align-content: center;
     align-items: center;
@@ -95,12 +93,95 @@ header {
     color: var(--primary-color);
 }
 
+/* ============= STYLE FOR NAVIGATION ============== */
+
+#hamburger-nav {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    
+    body {
+        margin : 1em 0;
+    }
+    .header-top {
+        height: 10vh;
+    }
+    section {
+        margin: 0;
+    }
+    #nav-desktop {
+        display: none;
+    }
+    #hamburger-nav {
+        display: block;
+    }
+
+    .header-top .content-right ul {
+        display: block;
+        gap: 2rem;
+    }
+    @keyframes showSlowMenu {
+        0%  {
+            opacity: 0;
+            transform: translate(159px, -6px);
+        }
+        50%  {
+            opacity: 0.5;
+            transform: translate(80px, 5px);
+        }
+        100%  {
+            opacity: 1;
+            transform: translate(10px, 10px);
+        }
+    }
+    #hamburger-nav .menu-links {
+        display: none;
+        position: relative;
+        top: 13vh;
+    }
+    #hamburger-nav .menu-links.active {
+        display: block;
+        transition: showSlowMenu .10s ease;
+    }
+
+    .hamburger-menu .menu-links .close {
+        margin-bottom: 15px;
+    }
+    .hamburger-menu .menu-links li a {
+        font-size: 15px;
+        background: transparent;
+    }
+
+    .hamburger-menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+    }
+    .hamburger-icon img {
+        height: 24px;
+        width: 30px;
+    }
+
+}
+
 /* ============= STYLE FOR SECTION PERSONAE ============= */ 
 
 section.section-top {
     height: 100vh;
 }
 section .content-personae {
+    margin: 0 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +195,8 @@ section .content-personae {
     margin: auto 0;
     border-radius: 10px;
     max-width: 100%;
-    /* background-image: url('/assets/image/david_person.jpg');
+    /* 
+    background-image: url('/assets/image/david_person.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
@@ -439,3 +521,34 @@ section#contact {
     color: var(--primary-color);
     text-underline-offset: 0.5rem;
 }
+
+.section-footer .text-footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    height: 4vh;
+}
+
+
+/*  STYLE RESPONSIVITY  */
+
+@media screen and ( max-width:1200px ) {
+
+    #sectionPersonae ,
+    #about ,
+    #experience ,
+    #projects ,
+    #contact ,
+    #footer {
+        display: none;
+    }    
+
+}
+
+/* TEST DE  */
+
+
+
